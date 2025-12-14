@@ -7,7 +7,7 @@ function create_particle(x, y, speed, spread, direction, number, size1, size2, l
 	speed = speed,
 	size1 = size1,
 	size2 = size2 or size1,
-	lifetime = (win_width+10) / speed,
+	lifetime = lifetime,
 	image = image,
 	finished = false,
 	fade = fade,
@@ -28,7 +28,7 @@ function create_particle(x, y, speed, spread, direction, number, size1, size2, l
 	
 	update = function(self, dt)		--Update particles
 		particle:update(dt)
-	print(win_width / speed)
+	--print(win_width / speed)
 		timer = timer + dt
 		if timer >= self.lifetime then
 			self.finished = true
